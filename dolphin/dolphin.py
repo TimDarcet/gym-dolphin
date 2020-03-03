@@ -238,7 +238,7 @@ import subprocess
 
 class DolphinRunner(Default):
   _options = [
-    Option('exe', type=str, default='dolphin-emu-headless', help="dolphin executable"),
+    Option('exe', type=str, default='dolphin-emu', help="dolphin executable"),
     Option('user', type=str, help="path to dolphin user directory"),
     Option('iso', type=str, default="SSBM.iso", help="path to SSBM iso"),
     Option('movie', type=str, help="path to dolphin movie file to play at startup"),
@@ -258,7 +258,7 @@ class DolphinRunner(Default):
       self.user = tempfile.mkdtemp() + '/'
   
     if self.gui:
-      self.exe = 'dolphin-emu-nogui'
+      self.exe = 'dolphin-emu'
       
       if 'speed' not in kwargs:
         kwargs['speed'] = 1
