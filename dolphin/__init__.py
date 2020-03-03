@@ -7,7 +7,7 @@ register(
     id='vladfi1/SSBM-v0',
     entry_point='dolphin:simpleSSBMEnv',
     reward_threshold=1,
-    timestep_limit=9999999,
+    max_episode_steps=9999999,
     kwargs=dict(
       cpu=9,
       gui=True,
@@ -22,7 +22,7 @@ register(
     id='vladfi1/SSBM-headless-v0',
     entry_point='dolphin:simpleSSBMEnv',
     reward_threshold=1,
-    timestep_limit=9999999,
+    max_episode_steps=9999999,
     kwargs=dict(
       cpu=9,
       stage='battlefield',
